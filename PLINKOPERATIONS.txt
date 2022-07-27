@@ -1,0 +1,18 @@
+INPUT INTO CONSOLE:
+
+
+CHOOSING INDIVIDUALS BASED ON GEOGRAPHIC AND TEMPORAL FILTERING
+
+./plink --bfile v50.0_1240k_public_plink --keep <filefromfiltering> --make-bed --out <newfile>
+
+
+REMOVING MISSING VARIANTS AND INDIVIDUALS
+
+./plink --bfile <fileforfiltering> --mind 0.45 --make-bed --out <newfile>
+
+./plink --bfile <fileforfiltering> --geno 0.50 --make-bed --out <newfile>
+
+
+FILTERING BY CHROMOSOME
+
+./plink --bfile <fileforfiltering> --chr <chrnumber> --make-bed --out <newfile>
